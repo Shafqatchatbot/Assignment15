@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" fill="currentColor" class="bi bi-xbox" viewBox="0 0 16 16">
+          <path d="M7.202 15.967a8 8 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33m-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.4 8.4 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.5 9.5 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4 4 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.8 7.8 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12 12 0 0 1-.654-.319Z"/>
+        </svg>
+        <span class="ml-3 text-xl"><I><u>NEXT AI</u></I></span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">Home</a>
+        <a class="mr-5 hover:text-gray-900">About Us</a>
+        <a class="mr-5 hover:text-gray-900">Portfolio</a>
+        <a class="mr-5 hover:text-gray-900">Contact Us</a>
+      </nav>
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Click here
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="data:image/jpeg;base64,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" alt="blog">
+            <div class="p-6">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Advance AI</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Internal AI</h1>
+              <p class="leading-relaxed mb-3">This year, it has become the technology that has caught all eyes thanks to its potential</p>
+              <div class="flex items-center flex-wrap ">
+                </span> <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>6
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://media.licdn.com/dms/image/C4D12AQHKmP4gKowEag/article-cover_image-shrink_600_2000/0/1520781719914?e=2147483647&v=beta&t=_fKY-YKYO-SD_Vj9TWVSS1TqTsemfgHWzbXDGIOEIYQ" alt="blog">
+            <div class="p-6">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">AI World</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">World's Technology</h1>
+              <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <div class="flex items-center flex-wrap">
+                
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>6
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq42fvINfSp84IOpx2tDUu5AKZcLYliCX29Q&usqp=CAU" alt="blog">
+            <div class="p-6">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">External AI</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Module:</h1>
+              <p class="leading-relaxed mb-3">As the hype around AI has accelerated, vendors have been scrambling to promote how their products and services use it.</p>
+              <div class="flex items-center flex-wrap ">
+                
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>6
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-12">
+        <div class="p-12 md:w-1/2 flex flex-col items-start">
+          <!-- <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest"></span> -->
+          <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Differences between AI, machine learning and deep learning</h2>
+          <p class="leading-relaxed mb-8">Machine learning enables software applications to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. This approach became vastly more effective with the rise of large data sets to train on. Deep learning, a subset of machine learning, is based on our understanding of how the brain is structured. Deep learning's use of artificial neural network structure is the underpinning of recent advances in AI, including self-driving cars and ChatGPT..</p>
+          <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+            <a class="text-indigo-500 inline-flex items-center">Done
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <span class="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+              <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>2.2K
+            </span>
+            <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+              <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>6
+            </span>
+          </div>
+          <a class="inline-flex items-center">
+            <img alt="blog" src="https://emeritus.org/wp-content/uploads/2023/10/2-1024x536.png.webp" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900">Host Shafqat</span>
+              <span class="text-gray-400 text-xs tracking-widest mt-0.5">AI DEVELOPER</span>
+            </span>
+          </a>
+        </div>
+        <div class="p-12 md:w-1/2 flex flex-col items-start">
+          <!-- <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">CATEGORY</span> -->
+          <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Why is artificial intelligence important?</h2>
+          <p class="leading-relaxed mb-8">AI is important for its potential to change how we live, work and play. It has been effectively used in business to automate tasks done by humans, including customer service work, lead generation, fraud detection and quality control. In a number of areas, AI can perform tasks much better than humans. Particularly when it comes to repetitive, detail-oriented tasks, such as analyzing large numbers of legal documents to ensure relevant fields are filled in properly, AI tools often complete jobs quickly and with relatively few errors. Because of the massive data sets it can process, AI can also give enterprises insights into their operations they might not have been aware of. The rapidly expanding population of generative AI tools will be important in fields ranging from education and marketing to product desig.</p>
+          <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+            <a class="text-indigo-500 inline-flex items-center">Done
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <span class="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+              <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>1.2K
+            </span>
+            <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+              <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>6
+            </span>
+          </div>
+          <a class="inline-flex items-center">
+            <img alt="blog" src="file:///C:/Users/Dahar's/Downloads/chat-right-fill.svg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900">Jones Alex</span>
+              <span class="text-gray-400 text-xs tracking-widest mt-0.5">DESIGNER AI </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-200 rounded overflow-hidden">
+          <div class="w-24 h-full bg-indigo-500"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Artificial intelligence in web development</h1>
+          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Go from a simple wireframe drawing to a fully functional prototype in minutes using AI.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://thumbs.dreamstime.com/b/ai-generated-image-under-commercial-license-artificial-intelligence-robot-machine-holding-tablet-274908176.jpg">
+          </div>
+          </a>
+        </div>
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://scx2.b-cdn.net/gfx/news/hires/2022/ai-2.jpg">
+          </div>
+          
+          </a>
+        </div>
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/48WMPx4NZ8rgRwPRncVspO/977c6f9ebcf6574de9878dc1a1ae324d/GettyImages-1224500457.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h=">
+          </div>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img alt="content" class="object-cover object-center h-full w-full" src="https://imgv3.fotor.com/images/side/customize-your-ai-robot-girl-in-different-aspects-in-Fotor-ai-art-generator_2023-05-16-034601_jdhn.jpg">
+      </div>
+      </a>
+    </div>
+    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img alt="content" class="object-cover object-center h-full w-full" src="https://www.elegantthemes.com/blog/wp-content/uploads/2023/06/What-is-AI-1.jpg">
+      </div>
+      
+      </a>
+    </div>
+    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img alt="content" class="object-cover object-center h-full w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGQGCBZxveoyTAoOJQfOKSr2KLFiKqK-vTHg&usqp=CAU">
+      </div>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+  
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">AI Platform With Each Advance Level !
+          <br class="hidden lg:inline-block">
+        </h1>
+        <p class="mb-8 leading-relaxed">In TeleportHQ you’ll find the AI Website design generator that automatically creates a website with responsive layout from a single prompt that you give to chat GPT. Within seconds, the AI builder will generate all the necessary sections. You can then make edits in TeleportHQ’s visual editor, or export the code to use in your own project.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Click</button>
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://www.91-cdn.com/hub/wp-content/uploads/2023/09/Best-AI-websites-that-you-should-try.jpg">
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Write a short description in the ChatGPT prompt</h1>
+        <p class="mb-8 leading-relaxed">Chat GPT and AI are emerging technologies that are transforming the way websites are created. </p>
+        <div class="flex w-full md:justify-start justify-center items-end">
+          <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+            <label for="hero-field" class="leading-7 text-sm text-gray-600">Placeholder</label>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        </div>
+        <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
+        <div class="flex lg:flex-row md:flex-col">
+          <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 512 512">
+              <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+            </svg>
+            <span class="ml-4 flex items-start flex-col leading-none">
+              <span class="text-xs text-gray-600 mb-1">GET IT ON</span>
+              <span class="title-font font-medium">Google Play</span>
+            </span>
+          </button>
+          <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 305 305">
+              <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+              <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+            </svg>
+            <span class="ml-4 flex items-start flex-col leading-none">
+              <span class="text-xs text-gray-600 mb-1">Download on the</span>
+              <span class="title-font font-medium">App Store</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHx8MA%3D%3D">
+      </div>
+    </div>
+  </section>
+
+  
+
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap md:text-left text-center order-first">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Links</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Report</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">AI Responce</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Advance</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">AI Gen</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Repart</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Advance AI</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Artificial Gen</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">ChatGPT</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Live Page</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Action</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Live Page</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Part one</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Click</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Touch</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE</h2>
+          <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+            <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+              <label for="footer-field" class="leading-7 text-sm text-gray-600">Holder</label>
+              <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Submit</button>
+          </div>
+          <p class="text-gray-500 text-sm mt-2 md:text-left text-center">Representative Our Page On Site
+            <br class="lg:block hidden">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-100">
+      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" fill="currentColor" class="bi bi-xbox" viewBox="0 0 16 16">
+            <path d="M7.202 15.967a8 8 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33m-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.4 8.4 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.5 9.5 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4 4 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.8 7.8 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12 12 0 0 1-.654-.319Z"/>
+          </svg>
+          <span class="ml-3 text-xl"><I><u>NEXT AI</u></I></span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2024 ARTIFICIAL —
+          <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@smitcoaching</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
